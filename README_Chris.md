@@ -75,19 +75,19 @@ Tips for extending.
 
 You will do the following tasks:
 
-* Write code for listBranches in a given repo under an owner. See [list branches](https://developer.github.com/v3/repos/#list-branches)
 * Write code for [create a new repo](https://developer.github.com/v3/repos/#create)
 * Write code for [creating an issue](https://developer.github.com/v3/issues/#create-an-issue) for an existing repo.
-* Write code for [editing a repo](https://developer.github.com/v3/repos/#edit) to enable wiki support.
-
-
-
+* Create a total of 10 issues with random titles, bodies, et cetera. 
+* Write code for [listing the issues in your repo](https://developer.github.com/v3/issues/#list-issues-for-a-repository)
+* Write code for [getting a single issue in your repo](https://developer.github.com/v3/issues/#get-a-single-issue)
 
 ## Data Collection
 
+## Scraping
+
 Not every dataset will have a nice REST api allowing you to get data. In addition, sometimes rate limits, or missing data will make it necessary to try something else. Sometimes, you need to learn how to scrap data.
 
-*Scrapping* is a process for acquiring content through a scripted browser or user agent. There are many tools that support scrapping, such as [beautifulsoup](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html). Scrapping can get tricky because content that you want may be deeply nested in a web page or it may be hidden behind several pages that require filling out forms or stepping through user interfaces.
+*Scraping* is a process for acquiring content through a scripted browser or user agent. There are many tools that support scraping. Scraping can get tricky because content that you want may be deeply nested in a web page or it may be hidden behind several pages that require filling out forms or stepping through user interfaces.
 
 For this workshop, will practice using Selenium, which is a powerful tool for scripting web browsers, such as Chrome.
 
@@ -119,7 +119,7 @@ Let's play around in Chrome's console.  Search for anything, and go to google's 
 
 Now that we know how to select elements. Lets automate the process of interacting and clicking through a webpage.
 
-Will will use Selenium to locate several properties from the following site: http://checkbox.io/studies.html
+We will use Selenium to locate several properties from the following site: http://checkbox.io/studies.html
 
 We will walk through one example, and you will do the rest on your own:
 
@@ -127,3 +127,7 @@ We will walk through one example, and you will do the rest on your own:
 * 2. The total number of studies closed is 5.
 * 3. If a status of a study is open, you can click on a "Participate" button.
 * 4. You can enter text into this study (don't *actually* submit, or you can't run test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
+
+### Other Scraping Utilities
+
+* [Beautifulsoup](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html). 
