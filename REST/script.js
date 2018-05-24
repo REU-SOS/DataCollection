@@ -31,6 +31,8 @@ function getYourRepos(userName)
 	// Send a http request to url and specify a callback that will be called upon its return.
 	request(options, function (error, response, body)
 	{
+		console.log('error:', error);
+		console.log('statusCode:', response && response.statusCode);
 		var obj = JSON.parse(body);
 		console.log( obj );
 		for( var i = 0; i < obj.length; i++ )

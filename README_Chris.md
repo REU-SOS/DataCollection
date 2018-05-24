@@ -77,7 +77,7 @@ You will do the following tasks:
 
 * Write code for [create a new repo](https://developer.github.com/v3/repos/#create)
 * Write code for [creating an issue](https://developer.github.com/v3/issues/#create-an-issue) for an existing repo.
-* Create a total of 10 issues with random titles, bodies, et cetera. 
+* Create a total of 5 issues with random titles, bodies, et cetera. 
 * Write code for [listing the issues in your repo](https://developer.github.com/v3/issues/#list-issues-for-a-repository)
 * Write code for [getting a single issue in your repo](https://developer.github.com/v3/issues/#get-a-single-issue)
 
