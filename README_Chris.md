@@ -148,3 +148,8 @@ Save the following into a .json or .csv file, with proper labels:
 * The version of the software
 * The build ID the crash occured in
 * What percentage of memory was in use in the system
+
+### Needed Utilities
+
+javascript/npm
+Maven/Eclipse
