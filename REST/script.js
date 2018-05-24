@@ -6,8 +6,8 @@ var parse = require('parse-link-header');
 
 ////// FILL IN THE BLANKS
 
-var token = "token " + "YOUR TOKEN";
-var userId = "chrisparnin";
+var token = "token " + "YOUR_TOKEN";
+var userId = "YOUR_USERNAME";
 
 var urlRoot = "https://api.github.com";
 // NCSU Enterprise endpoint:
@@ -22,14 +22,14 @@ function getYourRepos(userName)
 		url: urlRoot + '/users/' + userName + "/repos",
 		method: 'GET',
 		headers: {
-			"User-Agent": "EnableIssues",
+			"User-Agent": "GetYourRepos",
 			"content-type": "application/json",
 			"Authorization": token
 		}
 	};
 
 	// Send a http request to url and specify a callback that will be called upon its return.
-	request(options, function (error, response, body) 
+	request(options, function (error, response, body)
 	{
 		var obj = JSON.parse(body);
 		console.log( obj );
@@ -42,9 +42,7 @@ function getYourRepos(userName)
 
 }
 
-function listBranches(owner,repo)
+function createRepo(owner,repo)
 {
-	
+
 }
-
-
