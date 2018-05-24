@@ -135,3 +135,16 @@ See if you can scrape the following information from the site by writing new Sel
 ### Other Scraping Utilities
 
 * [Beautifulsoup](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html). 
+
+## Putting It All Together
+
+When you start working with your mentors, you (probably) won't have a set of instructions like the ones you're getting today. You're going to have to figure out how to research and perform some of these actions yourselves. Let's practice!
+
+Pick a language you've used today, and try to scrape data from the following site: https://crash-stats.mozilla.com/report/index/dac14c55-07bd-4cab-a745-e97350180524
+
+Save the following into a .json or .csv file, with proper labels:
+
+* The product involved in the crash
+* The version of the software
+* The build ID the crash occured in
+* What percentage of memory was in use in the system
