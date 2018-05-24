@@ -1,6 +1,6 @@
 # DataCollection
 
-Data scrapping and REST apis
+Data scraping and REST APIs.
 
 ### REST
 
