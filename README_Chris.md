@@ -48,6 +48,16 @@ The code makes a call to get all of a user's repos.
 	};
 ```
 
+### 3. On your own
+
+You will do the following tasks:
+
+* Write code for [create a new repo](https://developer.github.com/v3/repos/#create)
+* Write code for [creating an issue](https://developer.github.com/v3/issues/#create-an-issue) for an existing repo.
+* Create a total of 5 issues with random titles, bodies, et cetera. 
+* Write code for [listing the issues in your repo](https://developer.github.com/v3/issues/#list-issues-for-a-repository)
+* Write code for [getting a single issue in your repo](https://developer.github.com/v3/issues/#get-a-single-issue)
+
 ##### Debugging
 
 You can also debug/implement REST api calls using `curl`. 
@@ -71,17 +81,13 @@ Tips for extending.
 * Just replace the `--request` with your METHOD (e.g., GET, POST). 
 * You need `--data` when using POST/PATCH, that will be the data sent to the server.
 
-### 3. On your own
-
-You will do the following tasks:
-
-* Write code for [create a new repo](https://developer.github.com/v3/repos/#create)
-* Write code for [creating an issue](https://developer.github.com/v3/issues/#create-an-issue) for an existing repo.
-* Create a total of 5 issues with random titles, bodies, et cetera. 
-* Write code for [listing the issues in your repo](https://developer.github.com/v3/issues/#list-issues-for-a-repository)
-* Write code for [getting a single issue in your repo](https://developer.github.com/v3/issues/#get-a-single-issue)
-
 ## Data Collection
+
+Now that we can print data from GitHub to console, we need to collect it for later use.
+
+### To .json file
+
+### To .csv file
 
 ## Scraping
 
@@ -104,7 +110,18 @@ In a browser, a html page is represented by DOM, a document model consisting of 
 
 Let's play around in Chrome's console.  Search for anything, and go to google's search result page.  In a console, type: `$x("//a")`. This allows us to use a xpath expression to select all links.
 
-**Exercise**: How could could you select search results links?
+### Using Selenium
+
+Now that we know how to select elements. Lets automate the process of interacting and clicking through a webpage.
+
+We will use Selenium to locate several properties from the following site: http://checkbox.io/studies.html
+
+See if you can scrape the following information from the site by writing new Selenium tests. How would you assert each test is passing? http://junit.sourceforge.net/javadoc/org/junit/Assert.html
+
+* 1. The total number of studies still open.
+* 2. The participant count of "Frustration of Software Developers." 
+* 3. If a status of a study is open, you can click on a "Participate" button.
+* 4. You can enter text into this study (don't *actually* submit, or you can't run test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
 
 **Quick reference**:
 
@@ -114,19 +131,6 @@ Let's play around in Chrome's console.  Search for anything, and go to google's 
 * `//a[@data-href]` Select all links that have an attribute "data-href".
 * `//h2[.='Search Results']` Select all h2 elements with value = "Search Results".
 * `//h2/following-sibling::div"` Select the sibiling div after a h2 element.
-
-### Using Selenium
-
-Now that we know how to select elements. Lets automate the process of interacting and clicking through a webpage.
-
-We will use Selenium to locate several properties from the following site: http://checkbox.io/studies.html
-
-We will walk through one example, and you will do the rest on your own:
-
-* 1. The participant count of "Frustration of Software Developers" is 55
-* 2. The total number of studies closed is 5.
-* 3. If a status of a study is open, you can click on a "Participate" button.
-* 4. You can enter text into this study (don't *actually* submit, or you can't run test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
 
 ### Other Scraping Utilities
 
