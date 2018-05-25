@@ -41,7 +41,7 @@ The code makes a call to get all of a user's repos.
 		url: 'https://api.github.com/user/users/' + userName + "/repos",
 		method: 'GET',
 		headers: {
-			"User-Agent": "EnableIssues",
+			"User-Agent": "GetRepos",
 			"content-type": "application/json",
 			"Authorization": token
 		}
