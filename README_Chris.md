@@ -142,6 +142,8 @@ When you start working with your mentors, you (probably) won't have a set of ins
 
 Pick a language you've used today, and try to scrape data from the following site: https://crash-stats.mozilla.com/report/index/dac14c55-07bd-4cab-a745-e97350180524
 
+You'll need to fill in some of the blanks yourselves. If you choose Javascript, you'll need to look up a scraping approach to use. If you choose Java, you'll need to write a new program that also cleans and stores the data you're scraping.
+
 Save the following into a .json or .csv file, with proper labels:
 
 * The product involved in the crash
