@@ -18,7 +18,16 @@ Go to your profile page on github.
 
 <hr/>
 
-### 2. Test sample code
+
+### 2. Clone this repository
+
+Using the command line, clone (or copy) this repository to your own machine so you have a copy of the code we'll be working with today.
+
+```
+git clone https://github.com/REU-SOS/DataCollection.git
+```
+
+### 3. Test sample code
 
 This will install node packages into node_modules
 
@@ -48,7 +57,7 @@ The code makes a call to get all of a user's repos.
 	};
 ```
 
-### 3. On your own
+### 4. On your own
 
 You will do the following tasks:
 
@@ -91,7 +100,7 @@ Now that we can print data from GitHub to console, we need to collect it for lat
 
 ## Scraping
 
-Not every dataset will have a nice REST api allowing you to get data. In addition, sometimes rate limits, or missing data will make it necessary to try something else. Sometimes, you need to learn how to scrap data.
+Not every dataset will have a nice REST api allowing you to get data. In addition, sometimes rate limits, or missing data will make it necessary to try something else. In those cases, you need to know how to *scrape* data.
 
 *Scraping* is a process for acquiring content through a scripted browser or user agent. There are many tools that support scraping. Scraping can get tricky because content that you want may be deeply nested in a web page or it may be hidden behind several pages that require filling out forms or stepping through user interfaces.
 
@@ -99,7 +108,7 @@ For this workshop, will practice using Selenium, which is a powerful tool for sc
 
 ### Setup
 
-Preq: Make sure you have an [Eclipse environment with Maven](https://github.com/REU-SOS/EngineeringBasics).
+Prerequisite: Make sure you have an [Eclipse environment with Maven](https://github.com/REU-SOS/EngineeringBasics).
 
 * From Eclipse, use Import Existing Maven project. Locate Selenium folder and import.
 * Run JUnit tests and make sure you can see 2 passing test cases.
@@ -116,12 +125,12 @@ Now that we know how to select elements. Lets automate the process of interactin
 
 We will use Selenium to locate several properties from the following site: http://checkbox.io/studies.html
 
-See if you can scrape the following information from the site by writing new Selenium tests. How would you assert each test is passing? http://junit.sourceforge.net/javadoc/org/junit/Assert.html
+See if you can perform the following actions on this site by writing new Selenium tests. How would you assert each test is passing? http://junit.sourceforge.net/javadoc/org/junit/Assert.html
 
-* 1. The total number of studies still open.
-* 2. The participant count of "Frustration of Software Developers." 
-* 3. If a status of a study is open, you can click on a "Participate" button.
-* 4. You can enter text into this study (don't *actually* submit, or you can't run test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
+* 1. Scrape the total number of studies still open.
+* 2. Scrape the participant count of "Frustration of Software Developers." 
+* 3. If a status of a study is open, click on a "Participate" button.
+* 4. Enter text into a study (don't *actually* submit, or you can't run the test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
 
 **Quick reference**:
 
@@ -138,7 +147,7 @@ See if you can scrape the following information from the site by writing new Sel
 
 ## Putting It All Together
 
-When you start working with your mentors, you (probably) won't have a set of instructions like the ones you're getting today. You're going to have to figure out how to research and perform some of these actions yourselves. Let's practice!
+When you start working with your mentors, you (probably) won't have a set of instructions like the ones you're getting today. You're going to have to figure out how to research and perform some of these actions yourselves.
 
 Pick a language you've used today, and try to scrape data from the following site: https://crash-stats.mozilla.com/report/index/dac14c55-07bd-4cab-a745-e97350180524
 
@@ -150,8 +159,3 @@ Save the following into a .json or .csv file, with proper labels:
 * The version of the software
 * The build ID the crash occured in
 * What percentage of memory was in use in the system
-
-### Needed Utilities
-
-javascript/npm
-Maven/Eclipse
