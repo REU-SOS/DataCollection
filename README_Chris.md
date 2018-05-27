@@ -8,7 +8,7 @@ You will get practice interacting with a REST API in order to collect data. You 
 
 See also: https://github.com/espadrine/Solve-Data-In-Code/blob/master/misc/network.md
 
-### 1. Get a token. 
+### 1. Get a token.
 
 Go to your settings page on github and click on "Developer Settings." Make sure you save the token you generate somewhere, otherwise you will need to generate a new one. *Never* save tokens in a public place (like GitHub)!
 
@@ -65,13 +65,13 @@ You will do the following tasks:
 
 * Write code for [creating a new repo](https://developer.github.com/v3/repos/#create)
 * Write code for [creating an issue](https://developer.github.com/v3/issues/#create-an-issue) for an existing repo.
-* Create a total of 5 issues with random titles, bodies, et cetera. 
+* Create a total of 5 issues with random titles, bodies, et cetera.
 * Write code for [listing the issues in your repo](https://developer.github.com/v3/issues/#list-issues-for-a-repository)
 * Write code for [getting a single issue in your repo](https://developer.github.com/v3/issues/#get-a-single-issue)
 
 ##### Debugging
 
-You can also debug/implement REST api calls using `curl`. 
+You can also debug/implement REST api calls using `curl`.
 
 A simple example for getting all repos of authenicated user.
 
@@ -89,16 +89,27 @@ curl --request PATCH -H "Authorization: token YOURTOKEN" --data '{"name":"hw4","
 Tips for extending.
 
 * `-H` allows you to set headers as part of your request.
-* Just replace the `--request` with your METHOD (e.g., GET, POST). 
+* Just replace the `--request` with your METHOD (e.g., GET, POST).
 * You need `--data` when using POST/PATCH, that will be the data sent to the server.
 
 ## Data Collection
 
 Now that we can print data from GitHub to console, we need to collect it for later use.
 
-### To .json file
+### 1. To .json file
 
-### To .csv file
+First, let's print the results of *listing all of the issues in our repo*. Modify the parsing step of your function as follows:
+
+```
+var data = JSON.stringify(JSON.parse(body), null, 2);
+fs.writeFileSync('issues.json', data)
+```
+
+(For more information on why the stringify/parse steps are included, see this StackOverflow thread: https://stackoverflow.com/questions/4810841/how-can-i-pretty-print-json-using-javascript)
+
+### 2. On Your Own
+
+Try printing the .json file you just saved back to console. Create a new .js file or add a function to script.js. You'll need to do some reading/research on your own to figure out how to read the .json file you created.
 
 ## Scraping
 
@@ -130,7 +141,7 @@ We will use Selenium to locate several properties from the following site: http:
 See if you can perform the following actions on this site by writing new Selenium tests. How would you assert each test is passing? http://junit.sourceforge.net/javadoc/org/junit/Assert.html
 
 * 1. Scrape the total number of studies still open.
-* 2. Scrape the participant count of "Frustration of Software Developers." 
+* 2. Scrape the participant count of "Frustration of Software Developers."
 * 3. If a status of a study is open, click on a "Participate" button.
 * 4. Enter text into a study (don't *actually* submit, or you can't run the test again!): http://checkbox.io/studies/?id=569e667f12101f8a12000001
 
@@ -141,11 +152,11 @@ See if you can perform the following actions on this site by writing new Seleniu
 * `..` Select parent
 * `//a[@data-href]` Select all links that have an attribute "data-href".
 * `//h2[.='Search Results']` Select all h2 elements with value = "Search Results".
-* `//h2/following-sibling::div"` Select the sibiling div after a h2 element.
+* `//h2/following-sibling::div"` Select the sibling div after a h2 element.
 
 ### Other Scraping Utilities
 
-* [Beautifulsoup](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html). 
+* [Beautifulsoup](http://web.stanford.edu/~zlotnick/TextAsData/Web_Scraping_with_Beautiful_Soup.html).
 
 ## Putting It All Together
 
@@ -155,9 +166,9 @@ Pick a language you've used today, and try to scrape data from the following sit
 
 You'll need to fill in some of the blanks yourselves. If you choose Javascript, you'll need to look up a scraping approach to use. If you choose Java, you'll need to write a new program that also cleans and stores the data you're scraping.
 
-Save the following into a .json or .csv file, with proper labels:
+Save the following into a .json file, with proper labels:
 
 * The product involved in the crash
 * The version of the software
-* The build ID the crash occured in
+* The build ID the crash occurred in
 * What percentage of memory was in use in the system
