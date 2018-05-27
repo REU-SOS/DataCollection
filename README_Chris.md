@@ -10,9 +10,11 @@ See also: https://github.com/espadrine/Solve-Data-In-Code/blob/master/misc/netwo
 
 ### 1. Get a token. 
 
-Go to your settings page on github.
+Go to your settings page on github and click on "Developer Settings." Make sure you save the token you generate somewhere, otherwise you will need to generate a new one. *Never* save tokens in a public place (like GitHub)!
 
-![image](https://cloud.githubusercontent.com/assets/742934/12955762/8d8ae346-cff2-11e5-83ac-21cae5dc8531.png)
+![image](https://github.com/REU-SOS/DataCollection/blob/master/images/github_settings.png)
+
+![image](https://raw.githubusercontent.com/REU-SOS/DataCollection/master/images/github_developer_settings.png)
 
 ![image](https://cloud.githubusercontent.com/assets/742934/12955783/a741d0b0-cff2-11e5-9f95-4cfebe421756.png)
 
