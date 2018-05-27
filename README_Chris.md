@@ -1,6 +1,6 @@
 # DataCollection
 
-Data scraping and REST APIs.
+REST APIs and Data Scraping.
 
 ### REST
 
@@ -10,7 +10,7 @@ See also: https://github.com/espadrine/Solve-Data-In-Code/blob/master/misc/netwo
 
 ### 1. Get a token. 
 
-Go to your profile page on github.
+Go to your settings page on github.
 
 ![image](https://cloud.githubusercontent.com/assets/742934/12955762/8d8ae346-cff2-11e5-83ac-21cae5dc8531.png)
 
