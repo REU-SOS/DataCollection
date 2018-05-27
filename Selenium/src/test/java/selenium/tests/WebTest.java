@@ -17,7 +17,7 @@ import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebTest
 {
@@ -27,7 +27,7 @@ public class WebTest
 	public static void setUp() throws Exception 
 	{
 		//driver = new HtmlUnitDriver();
-		ChromeDriverManager.getInstance().setup();
+		WebDriverManager.getInstance(ChromeDriver.class).setup();
 		driver = new ChromeDriver();
 	}
 	
@@ -45,12 +45,11 @@ public class WebTest
 		driver.get("http://www.google.com");
         assertEquals("Google", driver.getTitle());		
 	}
-	
 
 	@Test
 	public void Closed() throws Exception
 	{
-		driver.get("http://www.checkbox.io/studies.html");
+		driver.get("http://checkbox.io/studies.html");
 		
 		// http://geekswithblogs.net/Aligned/archive/2014/10/16/selenium-and-timing-issues.aspx
 		WebDriverWait wait = new WebDriverWait(driver, 30);
